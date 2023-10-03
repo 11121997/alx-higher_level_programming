@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(i, 10):
-        if i < j:
-            print("{:d}{:d}".format(i, j),
-                    end="\n" if i == 8 and j == 9 else ", ")
+for n in range(10):
+    for k in range(n, 10):
+        if n < k:
+            print("{:d}{:d}".format(n, k), end="\n" if n == 8 and k == 9 else ", ")
