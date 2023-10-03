@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 for n in range(10):
     for k in range(n, 10):
-        if n < k:
-            print("{:d}{:d}".format(n, k),
-                    end="\n" if n == 8 and k == 9 else ", ")
+        if n == 8 and k == 9:
+            print("{}".format(89))
+        elif n < k:
+            print("{}{}".format(n, k), end=", ")
