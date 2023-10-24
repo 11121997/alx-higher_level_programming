@@ -46,7 +46,7 @@ class Square:
         """Area of the square
         Return: the current square area
         """
-        return self.__size ** 2
+        return self.__size * self.__size
 
     def my_print(self):
         if self.__size == 0:
