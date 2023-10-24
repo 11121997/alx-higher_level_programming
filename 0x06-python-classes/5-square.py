@@ -37,5 +37,5 @@ class Square:
     def my_print(self):
         for k in range(self.size):
             for h in range(self.size):
-                print("#", end='\n' if h == self.size - 1 and k != i else "")
+                print("#", end='\n' if h == self.size - 1 and k != h else "")
         print()
