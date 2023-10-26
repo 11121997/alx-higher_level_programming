@@ -22,7 +22,7 @@ class Node:
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
-    
+
     @property
     def next_node(self):
         """next node getter"""
@@ -45,7 +45,7 @@ class Node:
             """ insert new node"""
 
             new = Node(value)
-            if self.__head == None:
+            if self.__head = None:
                 new.next_node = None
                 self.__head = new
             elif self.__head.data > value:
