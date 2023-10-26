@@ -45,7 +45,7 @@ class Node:
             """ insert new node"""
 
             new = Node(value)
-            if self.__head = None:
+            if self.__head is None:
                 new.next_node = None
                 self.__head = new
             elif self.__head.data > value:
