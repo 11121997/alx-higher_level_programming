@@ -39,7 +39,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @property
     def area(self):
         """property returns the rectangle area"""
         return self.__width * self.__height
