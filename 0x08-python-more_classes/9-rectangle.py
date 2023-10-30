@@ -80,5 +80,8 @@ class Rectangle:
         return rect_1
 
     def square(cls, size=0):
-        """eturns a new Rectangle instance"""
+        """returns a new Rectangle instance
+        Args:
+            size: size of square
+        """
         return cls(size, size)
