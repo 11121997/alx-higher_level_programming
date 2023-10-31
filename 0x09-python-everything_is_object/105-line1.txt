@@ -1,2 +1,1 @@
 262
-it is actually an array of 262 integer
