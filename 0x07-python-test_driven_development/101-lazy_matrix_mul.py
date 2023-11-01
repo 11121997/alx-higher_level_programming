@@ -2,6 +2,7 @@
 """Lazy matrix mul module"""
 import numpy
 
+
 def lazy_matrix_mul(m_a, m_b):
     """
     function that multiplies 2 matrices
@@ -10,5 +11,5 @@ def lazy_matrix_mul(m_a, m_b):
         m_b: second matrix
         Return: m_a * m_b
     """
-    
+
     return numpy.matmul(m_a, m_b)
