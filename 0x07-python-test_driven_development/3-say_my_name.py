@@ -3,18 +3,15 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """ function that prints My name:
+    """Method for printing first and last name.
 
     Args:
-        first_name: string
-        last_name: string
+        first_name: first name string.
+        last_name: last name string.
 
-    Raise:
-        TypeError:
-            1- first_name must be a string
-            2- last_name must be a string
+    Raises:
+        TypeError: If first_name or last_name are not strings.
     """
-
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
 
@@ -22,7 +19,6 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
 
     print("My name is {:s} {:s}".format(first_name, last_name))
-
 
 if __name__ == "__main__":
     import doctest
