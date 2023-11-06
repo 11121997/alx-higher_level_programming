@@ -12,6 +12,7 @@ Correct Class Type test:
     >>> type(bg) == BaseGeometry
     True
 
+
 area() instance method
 ----------------------
 area method is an instance method:
@@ -32,6 +33,7 @@ area method normal test:
     >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
+
 
 integer_validator() instance method
 -----------------------------------
