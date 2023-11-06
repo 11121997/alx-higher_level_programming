@@ -72,3 +72,4 @@ Test append:
     >>> ml = MyList()
     >>> ml.append(10)
     >>> ml
+    [10]
