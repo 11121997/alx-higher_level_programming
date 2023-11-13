@@ -53,3 +53,12 @@ class Rectangle(Base):
     def y(self, value):
         """set y"""
         self.__y = value
+
+    def validation(self, name, value, k=True):
+        """validation of all setter methods"""
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if k and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+        if not k and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
