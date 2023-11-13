@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Base class module"""
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -23,6 +23,14 @@ class Base:
             return "[]"
         else:
             return dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """static method"""
+        if json_string is None or not json_string:
+            return "[]"
+        else:
+            return loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
