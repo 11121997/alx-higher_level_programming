@@ -62,4 +62,4 @@ class Base:
         if not path.isfile(file):
             return []
         with open(file, "r", encoding="utf-8") as f:
-            return [cls.create(**dic) for dic in cls.from_json_string(f.read())]
+            return [cls.create(**k) for k in cls.from_json_string(f.read())]
