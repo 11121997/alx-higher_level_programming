@@ -71,12 +71,32 @@ class Base:
         from models.square import Square
         if list_objs is not None:
             if cls is Rectangle:
-                list_objs = [[x.id, x.width, x.height, x.x, x.y]
-                             for x in list_objs]
+                list_objs = [[k.id, k.width, k.height, k.x, k.y]
+                             for k in list_objs]
             else:
-                list_objs = [[x.id, x.size, x.x, x.y]
-                             for x in list_objs]
+                list_objs = [[k.id, k.size, k.x, k.y]
+                             for k in list_objs]
         with open('{}.csv'.format(cls.__name__), 'w', newline='',
                   encoding='utf-8') as file:
             writer = csv.writer(file)
             writer.writerows(list_objs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''Loads object to csv file.'''
+        from models.rectangle import Rectangle
+        from models.square import Square
+        H = []
+        with open('{}.csv'.format(cls.__name__), 'r', newline='',
+                  encoding='utf-8') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                row = [int(k) for k in row]
+                if cls is Rectangle:
+                    n = {"id": row[0], "width": row[1], "height": row[2],
+                         "x": row[3], "y": row[4]}
+                else:
+                    n = {"id": row[0], "size": row[1],
+                         "x": row[2], "y": row[3]}
+                H.append(cls.create(**n))
+        return H
