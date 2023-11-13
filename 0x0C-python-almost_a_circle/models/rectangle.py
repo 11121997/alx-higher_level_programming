@@ -20,7 +20,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def widthy(self, value):
+    def width(self, value):
         """set width"""
         self.__width = value
 
