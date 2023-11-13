@@ -73,7 +73,7 @@ were given"
         b = Base(i)
         self.assertEqual(b.id, i)
 
-     def test_G_custom_id_str(self):
+    def test_G_custom_id_str(self):
         '''Tests custom int id.'''
         i = "FooBar"
         b = Base(i)
@@ -93,7 +93,7 @@ were given"
         s = "to_json_string() missing 1 required positional argument: \
 'list_dictionaries'"
         self.assertEqual(str(e.exception), s)
-        
+
         self.assertEqual(Base.to_json_string(None), "[]")
         self.assertEqual(Base.to_json_string([]), "[]")
         d = [{'x': 101, 'y': 20123, 'width': 312321, 'id': 522244,
