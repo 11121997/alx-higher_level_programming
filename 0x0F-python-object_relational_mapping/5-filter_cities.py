@@ -3,7 +3,8 @@
 lists all cities of that state, using the database hbtn_0e_4_usa"""
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
+
     import MySQLdb
     import sys
 
@@ -17,9 +18,5 @@ if __name__ = "__main__":
                ORDER BY cities.id ASC""", (sys.argv[4],))
 
     rows = cur.fetchall()
-    length = len(rows)
-    for i in range(length):
-        if i < length - 1:
-            print(rows[i][0], end=", ")
-        else:
-            print(rows[i][0])
+    for row in rows:
+        print(", ".join(row[0]))
