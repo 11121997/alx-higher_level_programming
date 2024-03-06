@@ -15,5 +15,5 @@ if __name__ == "__main__":
         print("{}: {}".format(
             commits[k].get("sha"),
             commits[k].get("commit").get("author").get("name")))
-        if k > 10:
+        if k > 9:
             break
