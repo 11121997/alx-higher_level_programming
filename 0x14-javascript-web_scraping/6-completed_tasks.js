@@ -8,15 +8,15 @@ request(url, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    const doit = JSON.parse(body);
+    const doits = JSON.parse(body);
     const completedTasks = {};
 
-    for (const doing of doit) {
-      if (doing.completed) {
-        if (doing.userID in completedTasks) {
-          completedTasks[doing.userId] += 1;
+    for (const doit of doits) {
+      if (doit.completed) {
+        if (doit.userID in completedTasks) {
+          completedTasks[doit.userId]++;
         } else {
-          completedTasks[doing.userId] = 1;
+          completedTasks[doit.userId] = 1;
         }
       }
     }
