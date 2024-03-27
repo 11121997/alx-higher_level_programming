@@ -4,17 +4,16 @@
 const request = require('request');
 const url = process.argv[2];
 
-request(url, function (err, response, body) {
-  if (err) {
-    console.log(err);
+request(url, function (error, resopnse, body) {
+  if (error) {
+    console.log(error);
   } else {
-    const doits = JSON.parse(body);
     const completedTasks = {};
-
-    for (const doit of doits) {
+    const todos = JSON.parse(body);
+    for (const doit of todos) {
       if (doit.completed) {
-        if (doit.userID in completedTasks) {
-          completedTasks[doit.userId]++;
+        if (doit.userId in completedTasks) {
+          completedTasks[doit.userId] += 1;
         } else {
           completedTasks[doit.userId] = 1;
         }
